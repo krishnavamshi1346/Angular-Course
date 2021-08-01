@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <!-- <button (click)="showSecret=!showSecret ">Display Details</button> -->
+      <button (click)="showSecretCode()">Display Details </button>
+      <p>{{count}}</p>
+      <div *ngFor="let logItem of log"
+      [ngStyle]="{backgroundColor:logItem>=5?'blue':'transparent'}"
+      [ngClass]="{'white-text':logItem>=5}">{{logItem}}</div>
+      <p *ngIf="showSecret"> My name is KV.Secret password KV.</p>
+    </div>
+  </div>
+</div>
